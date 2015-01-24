@@ -302,7 +302,6 @@ DEPENDENCIES
   jquery-rails
   launchy
   mini_magick
-  nokogiri
   pg
   pry-rails
   rails (= 4.2.0)

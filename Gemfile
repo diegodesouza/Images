@@ -45,5 +45,4 @@ gem 'foundation-rails'
 gem 'carrierwave'
 gem "mini_magick"
 gem 'fog'
-gem 'nokogiri'
 gem 'dotenv-rails', :groups => [:development, :test]

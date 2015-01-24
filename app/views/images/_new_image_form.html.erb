@@ -1,10 +1,9 @@
 <%= form_for @image do |f| %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
 
-<%= f.label :photo %>
-<%= f.file_field :photo %>
+  <%= f.label :photo %>
+  <%= f.file_field :photo %>
 
-<%= f.label :description %>
-<%= f.text_field :description %>
-
-<%= f.submit %>
+  <%= f.submit "Create", method: :post %>
 <% end %>

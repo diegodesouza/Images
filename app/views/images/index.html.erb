@@ -1,6 +1,6 @@
 <h3>Cody</h3>
 
 <% @images.each do |image| %>
-  <%= image.photo %>
+  <%= link_to image.photo, image_path(image) %>
   <%= image.description %>
 <% end %>

@@ -23,6 +23,22 @@ class ImagesController < ApplicationController
     end
   end
 
+  def edit
+    @image = Image.find(params[:id])
+  end
+
+  def update
+    @image = Image.find(params[:id])
+
+    if @image.update(images_params)
+      flash[:notice] = "Image updated successfully"
+      redirect_to image_path(@image)
+    else
+      render :edit
+    end
+  end
+
+
   private
 
   def images_params

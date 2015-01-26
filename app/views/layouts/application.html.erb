@@ -3,6 +3,7 @@
 <head>
   <title>Images</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag "vendor/modernizr" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -35,12 +36,7 @@
 
   <%= yield %>
 
-  <%= javascript_include_tag 'application' %>
-  <%= javascript_tag do %>
-    $(function(){
-      $(document).foundation();
-    });
-  <% end %>
   <%= yield :extra_footer %>
+  
 </body>
 </html>

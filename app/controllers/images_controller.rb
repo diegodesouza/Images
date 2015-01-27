@@ -5,10 +5,12 @@ class ImagesController < ApplicationController
 
   def show
     @image = Image.find(params[:id])
+    @comments = Comment.where(image_id: @image.id)
   end
 
   def new
     @image = Image.new
+    @comment = Comment.new
   end
 
   def create
@@ -49,6 +51,6 @@ class ImagesController < ApplicationController
   private
 
   def images_params
-    params.require(:image).permit(:admin_id, :description, :photo)
+    params.require(:image).permit(:admin_id, :description, :photo, :comment_id)
   end
 end

@@ -1,5 +1,14 @@
-<%= image_tag @image.photo.url, size:"400x300" %>
-<%= @image.description %>
+<div class="card">
+  <div class="container">
+    <div class="front">
+
+      <%= image_tag @image.photo.url, size:"400x300" %>
+    </div>
+    <div class="back">
+      <h5><%= @image.description %></h5>
+    </div>
+  </div>
+</div>
 
 <%= link_to "Edit", edit_image_path(@image) %>
 <%= link_to "Delete", image_path(@image), method: :delete,

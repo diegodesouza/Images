@@ -15,6 +15,7 @@
       <h3>Lorem ipsum dolor sit amet, consectetur</h3>
       <p><%= image.description %></p>
       <%= link_to "Image", image_path(image) %>
+      <%= link_to "Comment", new_image_comment_path(image) %>
     </div>
     <% end %>
   </div>

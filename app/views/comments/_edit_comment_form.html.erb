@@ -1,0 +1,6 @@
+<%= form_for [@image, @comment] do |f| %>
+<%= f.label :description %>
+<%= f.text_field :description %>
+
+<%= f.submit "Update Comment", method: :post %>
+<% end %>

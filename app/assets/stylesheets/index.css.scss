@@ -1,9 +1,28 @@
+/* *************** top bar *****************************************    */
+
+
+.top-bar {
+  background: #F88863;
+  overflow: hidden;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background: #F88863;
+}
+/* ****************************************************************     */
+#header {
+  width: 100%;
+  border-radius: 0%;
+}
+
+/* ****************************************************************     */
+
 img {
  border-radius: 100%;
  width: 300px;
  height: 300px;
+ margin-left: 0%;
 }
-
 
 .path-container {
  margin-top: 50px;
@@ -27,7 +46,7 @@ img {
  font-size: emCalc(14px);
 }
 .path-container .path-item .circle {
- background-color: #ccc;
+ background-color: #F88863;
  background-size: 300px 300px;
  border-radius: 50%;
  width: 300px;
@@ -43,7 +62,7 @@ img {
  right: -10px;
 }
 .path-container .line {
- background: #ddd;
+ background: #F88863;
  width: 2px;
  bottom: 0;
  position: absolute;

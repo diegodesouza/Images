@@ -6,4 +6,8 @@ Rails.application.routes.draw do
     resources :comments, only: [:new, :create, :edit, :update, :destroy]
   end
 
+  namespace :admin, only: [] do
+    resources :images, only: [:new, :create, :edit, :update, :destroy]
+    resources :comments, only: [:destroy]
+  end
 end

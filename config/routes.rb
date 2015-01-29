@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
   root 'images#index'
-  devise_for :users
+
+  devise_for :users, :controllers => {:registrations => "registrations"}
 
   resources :images do
     resources :comments, only: [:new, :create, :edit, :update, :destroy]
-  end
-
-  namespace :admin, only: [] do
-    resources :images, only: [:new, :create, :edit, :update, :destroy]
-    resources :comments, only: [:destroy]
   end
 end

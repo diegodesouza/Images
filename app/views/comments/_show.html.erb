@@ -1,6 +1,9 @@
 <% @comments.each do |comment| %>
   <%= comment.description %>
-  <%= link_to "Edit Comment", edit_image_comment_path(@image, comment) %>
-  <%= link_to "Delete", image_path(@image, comment), method: :delete,
-  data: { confirm: "Are you sure?" } %><br>
+  <% if comment.user == current_user %>
+    <%= link_to "Edit Comment", edit_image_comment_path(@image, comment) %>
+    <%= link_to "Delete Comment", image_path(@image, comment), method: :delete,
+    data: { confirm: "Are you sure?" } %>
+  <% elsif current_user == nil %>
+  <% end %><br><br>
 <% end %>

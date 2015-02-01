@@ -9,14 +9,14 @@
   <div class="row path-item">
     <div class="large-7 push-5 columns">
       <div class="circle circle-left ">
-        <%= image_tag image.photo.url, size:"300x300" %>
+        <%= link_to image_path(image) do %>
+          <%= image_tag image.photo.url, size:"300x300" %>
+        <% end %>
       </div>
     </div>
     <div class="large-5 pull-7 columns path-text left">
       <h3>Lorem ipsum dolor sit amet, consectetur</h3>
       <p><%= image.description %></p>
-      <%= link_to "Image", image_path(image) %>
-      <%= link_to "Comment", new_image_comment_path(image) %>
     </div>
     <% end %>
   </div>

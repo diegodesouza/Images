@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
     @image = Image.find(params[:image_id])
     @comment = Comment.new(comment_params)
     @comment.image_id = @image.id
+    @comment.user = current_user
 
     if @comment.save
       flash[:notice] = "Comment successfully created"
@@ -20,6 +21,7 @@ class CommentsController < ApplicationController
   def edit
     @image = Image.find(params[:image_id])
     @comment = @image.comments.find(params[:id])
+    @comment.user = current_user
   end
 
   def update
@@ -36,7 +38,7 @@ class CommentsController < ApplicationController
 
   def destroy
     @image = Image.find(params[:image_id])
-    @comment = Comment.find(params[:id])
+    @comment = current_user.comments.find(params[:id])
     flash[:notice] = "Comment successfully deleted"
     redirect_to image_path(@image)
   end
@@ -44,6 +46,6 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:admin_id, :image_id, :description)
+    params.require(:comment).permit(:user_id, :image_id, :description)
   end
 end

@@ -15,6 +15,7 @@ class ImagesController < ApplicationController
 
   def create
     @image = Image.new(images_params)
+    @image.user = current_user
 
     if @image.save
       flash[:notice] = "Here is a treat."

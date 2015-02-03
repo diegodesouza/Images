@@ -46,3 +46,4 @@ gem 'carrierwave'
 gem "mini_magick"
 gem 'fog'
 gem 'dotenv-rails', :groups => [:development, :test]
+gem "font-awesome-rails"

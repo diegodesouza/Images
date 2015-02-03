@@ -1,25 +1,19 @@
-<div class="path-container">
-  <div class="row">
-    <div class="large-12 columns ">
-      <h1> This is a Timeline!</h1>
-    </div>
-    <% @images.each do |image| %>
-  </div>
-  <section>
-  <div class="row path-item">
-    <div class="large-7 push-5 columns">
-      <div class="circle circle-left ">
-        <%= image_tag image.photo.url, size:"300x300" %>
+<div id="title">
+  <h3> I haz a</h3>
+  <h1> Website </h1>
+</div>
+
+<div class="row">
+  <div class="large-12 columns">
+    <div id="masonryContainer">
+      <% @images.each do |image| %>
+      <div class="masonry-brick">
+        <%= link_to image_path(image) do %>
+        <%= image_tag image.photo.url, size:"250x250"%>
+        <% end %>
+        <h3><%= image.description %></h3>
       </div>
+      <% end %>
     </div>
-    <div class="large-5 pull-7 columns path-text left">
-      <h3>Lorem ipsum dolor sit amet, consectetur</h3>
-      <p><%= image.description %></p>
-      <%= link_to "Image", image_path(image) %>
-      <%= link_to "Comment", new_image_comment_path(image) %>
-    </div>
-    <% end %>
   </div>
-</section>
-  <span class="line hide-for-small"></span>
 </div>

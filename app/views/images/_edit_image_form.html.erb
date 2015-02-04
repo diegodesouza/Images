@@ -1,12 +1,17 @@
 <%= form_for @image do |f| %>
-<%= f.label :title %>
-<%= f.text_field :title %>
-
-<%= f.label :description %>
-<%= f.text_field :description %>
-
-<%= f.label :photo %>
-<%= f.file_field :photo %>
-
-<%= f.submit "Update", method: :post %>
+<div class="field">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</div>
+<div class="field">
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+</div>
+<div class="field">
+  <%= f.label :photo %>
+  <%= f.file_field :photo %>
+</div>
+<div class="actions">
+  <%= f.submit "Update", class:"button", method: :post %>
+</div>
 <% end %>

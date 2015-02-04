@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
@@ -47,3 +47,4 @@ gem "mini_magick"
 gem 'fog'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem "font-awesome-rails"
+gem 'rails_12factor'

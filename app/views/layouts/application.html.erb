@@ -11,11 +11,12 @@
 
   <nav class="top-bar">
     <ul class="title-area">
-      <li class="name">
-        <h1><a href="/">Images</a></h1>
+      <li>
+        <h1 class="home"><%= link_to "Home", root_path %></h1>
       </li>
     </ul>
 
+    <section class="toggle-topbar-section">
     <section class="top-bar-section">
       <ul class="right">
         <% if current_user && current_user.admin? %>
@@ -28,6 +29,7 @@
           <li><%= link_to 'Sign In', new_user_session_path %></li>
         <% end %>
       </ul>
+    </section>
     </section>
   </nav>
 
@@ -44,9 +46,10 @@
 </body>
 <footer id="footer">
   <div class="social">
-    <a href="https://linkedin.com/diegotrus7"><i class="fa fa-linkedin-square"></i></a>
-    <a href="https://www.facebook.com/diego.desouza.9809"><i class="fa fa-facebook-official"></i></a>
-    <a href="https://twitter.com/DiegoTrus7"><i class="fa fa-twitter-square"></i></a>
+    <a href="https://linkedin.com/diegotrus7"><i class="fa fa-linkedin-square fa-2x"></i></a>
+    <a href="https://www.facebook.com/diego.desouza.9809"><i class="fa fa-facebook-official fa-2x"></i></a>
+    <a href="https://twitter.com/DiegoTrus7"><i class="fa fa-twitter-square fa-2x"></i></a>
+    <a herf="https://github.com/diegodesouza"><i class="fa fa-github-square fa-2x"></i></a>
   </div>
 </footer>
 </div>

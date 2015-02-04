@@ -1,20 +1,33 @@
 <div class="card">
   <div class="container">
     <div class="front">
-
-      <%= image_tag @image.photo.url, class:"image-show", size:"400x300" %>
+      <%= image_tag @image.photo.url, class:"image-show", size:"450x400" %>
     </div>
     <div class="back">
-      <h5><%= @image.description %></h5>
-      <% if current_user == @image.user || current_user.admin? %>
-      <%= link_to "Edit Image", edit_image_path(@image) %>
-      <%= link_to "Delete Image", image_path(@image), method: :delete,
-      data: { confirm: "Are you sure?" } %>
-      <% end %>
+
+      <table>
+        <thead>
+          <th width="620">About</th>
+        </thead>
+        <tbody>
+          <td><%= @image.description %></td>
+        </tbody>
+          <% if current_user == @image.user || current_user.admin? %>
+            <%= link_to "Edit Image", edit_image_path(@image), class:"small button" %>&emsp;
+            <%= link_to "Delete Image", image_path(@image), method: :delete,
+            data: { confirm: "Are you sure?" }, class:"small button" %>
+          <% end %>
+      </table>
+      </div>
     </div>
   </div>
-<%= link_to "Leave a Comment", new_image_comment_path(@image) %>
-</div>
-</div>
-<%= render "comments/show" %><br>
-</div>
+
+      <table id="comments">
+        <thead>
+          <th width="350">Comments</th>
+          <th width="130"><%= link_to "Leave a Comment", new_image_comment_path(@image), class:"small button" %><br></th>
+        </thead>
+        <tbody>
+            <td><%= render "comments/show" %></td><br>
+        </tbody>
+      </table>

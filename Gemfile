@@ -48,3 +48,4 @@ gem 'fog'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem "font-awesome-rails"
 gem 'rails_12factor', group: :production
+gem 'unicorn'

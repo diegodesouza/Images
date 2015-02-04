@@ -1,6 +1,9 @@
 <%= form_for [@image, @comment] do |f| %>
+<div class="field">
   <%= f.label :description %>
   <%= f.text_field :description %>
-
-  <%= f.submit "Submit Comment", method: :post %>
+</div>
+<div class="action">
+  <%= f.submit "Submit Comment", class:"button", method: :post %>
+</div>
 <% end %>

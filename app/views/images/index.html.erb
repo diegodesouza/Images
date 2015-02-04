@@ -1,6 +1,7 @@
-<div id="title">
-  <h3> I haz a</h3>
-  <h1> Website </h1>
+<div class="title">
+  <h3 class="title-small">I can</h3>
+  <h3 class="title-single">haz</h3>
+  <h1 id="title-large">A LIFE </h1>
 </div>
 
 <div class="row">
@@ -9,9 +10,9 @@
       <% @images.each do |image| %>
       <div class="masonry-brick">
         <%= link_to image_path(image) do %>
-        <%= image_tag image.photo.url, size:"250x250"%>
+        <%= image_tag image.photo.url, size:"350x400"%>
         <% end %>
-        <h3><%= image.description %></h3>
+        <h3 id="title"><%= image.title %></h3><br><br><br>
       </div>
       <% end %>
     </div>

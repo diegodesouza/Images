@@ -11,11 +11,12 @@
 
   <nav class="top-bar">
     <ul class="title-area">
-      <li class="name">
-        <h1><a href="/">Images</a></h1>
+      <li>
+        <h1 class="home"><%= link_to "Home", root_path %></h1>
       </li>
     </ul>
 
+    <section class="toggle-topbar-section">
     <section class="top-bar-section">
       <ul class="right">
         <% if current_user && current_user.admin? %>
@@ -28,6 +29,7 @@
           <li><%= link_to 'Sign In', new_user_session_path %></li>
         <% end %>
       </ul>
+    </section>
     </section>
   </nav>
 

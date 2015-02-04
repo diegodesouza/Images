@@ -308,6 +308,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   dotenv-rails
+  excon (~> 0.38)
   factory_girl
   fog
   font-awesome-rails

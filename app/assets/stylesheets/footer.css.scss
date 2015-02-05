@@ -4,8 +4,9 @@
   height: 216px;
   background-image: image-url('footer.jpg');
   background-size: 100%;
-  position: fixed;
+  position: relative;
   bottom: 0;
+  z-index: 2;
 }
 
 .social {
